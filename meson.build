@@ -218,7 +218,7 @@ if not gles1_dep.found() and host_machine.system() == 'windows'
   gles1_dep = cc.find_library('libGLESv1_CM.dll', required: false)
 endif
 
-elg_headers_dep = egl_dep.partial_dependency(compile_args: true, includes: true)
+egl_headers_dep = egl_dep.partial_dependency(compile_args: true, includes: true)
 
 # On windows, the DLL has to have all of its functions
 # resolved at link time, so we have to link directly against
