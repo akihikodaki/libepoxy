@@ -204,10 +204,10 @@ if not gles2_dep.found() and host_machine.system() == 'windows'
   gles2_dep = cc.find_library('libGLESv2.dll', required: false)
 endif
 if not gles2_dep.found()
-  egl_dep = dependency('Qt5Gui', modules: 'Qt5::Gui_GLESv2', required: false)
+  gles2_dep = dependency('Qt5Gui', modules: 'Qt5::Gui_GLESv2', required: false)
 endif
 if not gles2_dep.found()
-  egl_dep = dependency('Qt5Gui', modules: 'Qt5::Gui_GLESv2', required: false)
+  gles2_dep = dependency('Qt5Gui', modules: 'Qt5::Gui_GLESv2', required: false)
 endif
 
 gles1_dep = dependency('glesv1_cm', required: false)
