@@ -182,7 +182,7 @@ x11_headers_dep = x11_dep.partial_dependency(compile_args: true, includes: true)
 
 # We have multiple checks for EGL and GLES v2/v1 to support different providers:
 # 1. pkg-config for Mesa
-# 2. find_library() for ANGLE, which do not support pkg-config nor CMake.
+# 2. find_library() for ANGLE, which does not support pkg-config nor CMake.
 #    Note that Microsoft's "link" requires "lib" prefix.
 # 3. CMake for Qt 5, which bundles ANGLE.
 egl_dep = dependency('egl', required: false)
